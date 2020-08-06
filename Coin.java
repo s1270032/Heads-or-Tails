@@ -1,8 +1,14 @@
 import java.util.Random;
+import java.util.Scanner;
 
 class Coin{
     public static void main(String args[]){
         Random rand = new Random();
+        Scanner scan = new Scanner(System.in);
+
+     System.out.println("Who are you?");
+     String user = scan.nextLine();
+     System.out.println("Hello,"+user+"!");
         
         System.out.println("Tossing a coin...");
 
@@ -23,11 +29,12 @@ class Coin{
         System.out.println("Heads: "+head+",Tails: "+tail);
 
         if(head>tail){
-            System.out.println("You won!");
+            System.out.println(user+" won!");
         }else{
-            System.out.println("You lose!");
+            System.out.println(user+" lose!");
         }
         
+        scan.close();
         
     }
 }
